@@ -1,0 +1,89 @@
+<nav id="sidebarMenu" class=" col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+
+    <div class="position-sticky pt-4">
+        <ul class="nav flex-column mt-2">
+            <li class="nav-item" title="Dashboard">
+                <a 
+                    class='nav-link active bg-primary text-white'
+                    href="">
+                    <span data-feather="home"></span>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="nav-item"  title="My journal">
+                <div class='d-flex nav-link'>
+                    <a style="width: 87%;" class='text-decoration-none text-dark'>
+                        <div>
+                            <span data-feather="file-text"></span>
+                            My Journal
+                        </div>
+                    </a>
+                    <a style="width: 13%;" title="Create new term" class='text-decoration-none' href="">
+                        <i class="material-icons my-0 py-0">add</i>
+                    </a>
+                   
+                </div>
+            </li>
+
+
+            <li class="nav-item" title="My Journals">
+                <div class='d-flex nav-link'>
+                    <a style="width: 87%;"
+                        class='text-decoration-none '
+                        href="">
+                        <div>
+                            <span data-feather="file-text"></span>
+                            My Journals
+                        </div>
+                    </a>
+                    <a style="width: 13%;" title="Create new term"
+                        class='text-decoration-none'
+                        data-bs-toggle="modal" data-bs-target="#folderForm">
+                        <i class="material-icons my-0 py-0 mk-pointer">add</i>
+                    </a>
+            
+                </div>
+
+
+            </li>
+
+            <li class="nav-item" title="Profile">
+                <a class='nav-link active bg-primary text-white'
+                    href="">
+                    <div class="d-flex align-items-center">
+                        <span class="material-icons" style="font-size: 20px;">
+                            person
+                        </span>
+                        <span class="mx-2">Profile</span>
+            
+                    </div>
+                </a>
+            </li>
+
+            
+        </ul>
+
+ 
+
+        <hr class="mx-3">
+
+        <a href="{% url 'logout' %}" title="Logout" class="text-decoration-none" style="width: 100%;">
+            <div class="d-grid gap-2 px-3">
+                <button class="btn btn-secondary d-flex align-items-center justify-content-center" type="submit">
+                    <div class="d-flex align-items-center">
+                        <i class="material-icons mx-1">logout</i>
+                        Logout
+                    </div>
+                </button>
+            </div>
+        </a>
+    </div>
+</nav>
+
+
+<script>
+    let id = 'folder_{{ folder.id }}';
+    document.getElementById(id).scrollIntoView();
+
+</script>
